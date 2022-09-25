@@ -1,0 +1,20 @@
+package com.example.bggpricenotifier.consumer.boardgame;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.xml.bind.annotation.*;
+
+@Getter
+@Setter
+@XmlRootElement(name = "price")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Price {
+
+    @XmlAttribute(name = "currency")
+    private String currency;
+
+    @XmlValue
+    private Double value;
+
+}
