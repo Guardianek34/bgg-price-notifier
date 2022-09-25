@@ -1,22 +1,26 @@
-package com.example.bggpricenotifier.consumer.boardgame;
+package com.example.bggpricenotifier.consumer.boardgame.model;
 
+import com.example.bggpricenotifier.consumer.boardgame.model.parser.DateParser;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.time.LocalDateTime;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.Date;
 
 
 @Getter
 @Setter
 @XmlRootElement(name = "listing")
-@XmlAccessorType()
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MarketplaceListing {
 
     @XmlElement(name = "listdate")
-    private LocalDateTime listDate;
+    @XmlJavaTypeAdapter(DateParser.class)
+    private Date listDate;
 
     @XmlElement(name = "price")
     private Price price;

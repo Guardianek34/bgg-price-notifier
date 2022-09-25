@@ -1,4 +1,4 @@
-package com.example.bggpricenotifier.consumer.boardgame;
+package com.example.bggpricenotifier.consumer.boardgame.model;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
