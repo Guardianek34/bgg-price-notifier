@@ -1,4 +1,4 @@
-package com.example.bggpricenotifier.consumer.boardgame.model;
+package com.example.bggpricenotifier.consumer.boardgame.model.marketplace;
 
 import lombok.Getter;
 import lombok.Setter;

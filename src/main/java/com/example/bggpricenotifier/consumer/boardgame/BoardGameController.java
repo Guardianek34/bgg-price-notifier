@@ -1,7 +1,6 @@
 package com.example.bggpricenotifier.consumer.boardgame;
 
-import com.example.bggpricenotifier.consumer.boardgame.model.BoardGame;
-import com.example.bggpricenotifier.consumer.boardgame.model.BoardGames;
+import com.example.bggpricenotifier.consumer.boardgame.model.boardgame.BoardGames;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

@@ -1,7 +1,6 @@
 package com.example.bggpricenotifier.consumer.boardgame;
 
-import com.example.bggpricenotifier.consumer.boardgame.model.BoardGame;
-import com.example.bggpricenotifier.consumer.boardgame.model.BoardGames;
+import com.example.bggpricenotifier.consumer.boardgame.model.boardgame.BoardGames;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,7 +12,7 @@ public class BoardGameService {
 
     public ResponseEntity<BoardGames> retrieveMarketStatistics(long gameID){
         BoardGames object = rest.getForObject(
-                "https://api.geekdo.com/xmlapi/boardgame/" + gameID + "?marketplace=1",
+                "https://boardgamegeek.com/xmlapi2/thing?type=boardgame&marketplace=1&id=167791&versions=1",
                 BoardGames.class
         );
         return ResponseEntity.ok(object);

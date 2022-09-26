@@ -1,4 +1,4 @@
-package com.example.bggpricenotifier.consumer.boardgame.model;
+package com.example.bggpricenotifier.consumer.boardgame.model.marketplace;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +14,6 @@ public class Price {
     @XmlAttribute(name = "currency")
     private String currency;
 
-    @XmlValue
+    @XmlAttribute(name = "value")
     private Double price;
 }
