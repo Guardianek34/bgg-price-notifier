@@ -14,7 +14,6 @@ public class Price {
     @XmlAttribute(name = "currency")
     private String currency;
 
-    @XmlMixed
-    private Double value;
-
+    @XmlValue
+    private Double price;
 }

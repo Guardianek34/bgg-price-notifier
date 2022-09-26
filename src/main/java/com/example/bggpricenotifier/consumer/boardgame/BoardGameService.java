@@ -11,13 +11,11 @@ public class BoardGameService {
 
     private final RestTemplate rest = new RestTemplate();
 
-    public ResponseEntity<BoardGame> retrieveMarketStatistics(long gameID){
-        ResponseEntity<BoardGame> response = rest.getForEntity(
+    public ResponseEntity<BoardGames> retrieveMarketStatistics(long gameID){
+        BoardGames object = rest.getForObject(
                 "https://api.geekdo.com/xmlapi/boardgame/" + gameID + "?marketplace=1",
-                BoardGame.class, gameID);
-
-        System.out.println(response.getBody());
-
-        return response;
+                BoardGames.class
+        );
+        return ResponseEntity.ok(object);
     }
 }

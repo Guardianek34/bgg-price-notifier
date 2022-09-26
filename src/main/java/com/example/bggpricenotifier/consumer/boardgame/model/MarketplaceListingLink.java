@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Getter
 @Setter
-@XmlRootElement(name = "boardgame")
+@XmlRootElement(name = "link")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MarketplaceListingLink {
 

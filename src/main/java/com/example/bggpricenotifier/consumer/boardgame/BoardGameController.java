@@ -17,7 +17,7 @@ public class BoardGameController {
     private final BoardGameService boardGameService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<BoardGame> getBoardGame(@PathVariable("id") long gameID){
+    public ResponseEntity<BoardGames> getBoardGame(@PathVariable("id") long gameID){
         return boardGameService.retrieveMarketStatistics(gameID);
     }
 

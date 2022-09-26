@@ -8,13 +8,14 @@ import java.util.List;
 
 @Getter
 @Setter
-@XmlRootElement(name = "boardgames")
+@XmlRootElement(name = "boardgame")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BoardGame {
 
     @XmlAttribute(name = "objectid")
     private Long objectID;
 
-    @XmlElement(name = "marketplacelistings")
+    @XmlElementWrapper(name = "marketplacelistings")
+    @XmlElement(name = "listing")
     private List<MarketplaceListing> marketplaceListings;
 }
